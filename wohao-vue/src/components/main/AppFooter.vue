@@ -11,7 +11,7 @@
           </li>
           <li>
             <i class="fa fa-list"></i>
-            <router-link to="">列表</router-link>
+            <router-link to="app-good-list">分类</router-link>
           </li>
           <li>
               <i class="fa fa-cart-plus"></i>
@@ -58,7 +58,8 @@ export default {
                 color: #333;
                 i{
                     color: #333;
-                    font-size: 25px;
+                    font-size: 20px;
+                    color: #333;
                 }
                 a{
                     font-size: 13px;

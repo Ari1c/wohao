@@ -20,7 +20,7 @@ export default {
 <style lang="scss">
     .app-header{
         padding: 15px;
-        background:red;
+        background-color: #E71F19;
         color: #fff;
         width: 100%;
         height: 45px;
