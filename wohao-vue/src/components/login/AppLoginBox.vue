@@ -2,12 +2,12 @@
   <div class="app-login-box">
       <div class="login-con">
           <div class="login">
-          用户名：<input type="text" placeholder="请输入ID/邮箱/手机号">
+          用户名：<input v-model="login.username" type="text" placeholder="请输入ID/邮箱/手机号">
       </div>
       <div class="login-password">
-          密码：<input type="password" placeholder="密码">
+          密码：<input v-model="login.password" type="password" placeholder="密码">
       </div>
-      <button>登&nbsp;录</button>
+      <button class="login-btn" type="submit" @click="logins({username:login.username,password:login.password})">登&nbsp;录</button>
       <div class="auto">
           <span><input type="checkbox" >自动登录</span>
           <router-link to="app-register">免费注册</router-link>
@@ -17,9 +17,30 @@
 </template>
 
 <script>
+import {Toast} from 'mint-ui'
 import AppRegister from '../register/AppRegister'
 export default {
     name:'app-login-box',
+    data(){
+        return {
+           login:{username:'',password:''} 
+        }
+    },
+    methods:{
+        logins(data){
+            let that = this
+            var user_info = JSON.parse(localStorage.user_info)
+            setTimeout(()=>{
+               if(user_info.username == data.username && user_info.password == data.password){
+                   Toast('登陆成功')
+                //    that.$router.push({name:'/'})
+                        that.$router.replace({name:'main'})
+               }else{
+                   Toast('登陆失败')
+               }
+            },500)
+        }
+    },
     components:{
         AppRegister
     }

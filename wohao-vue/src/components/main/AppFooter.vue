@@ -3,7 +3,7 @@
       <ul>
           <li>
               <i class="fa fa-home"></i>
-             <router-link to="">首页</router-link>  
+             <router-link to="/">首页</router-link>  
           </li>
           <li>
               <i class="fa fa-map-pin"></i>

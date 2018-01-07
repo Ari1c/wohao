@@ -1,18 +1,33 @@
 <template>
   <div class="app-register-box">
       <form action="">
-        <input type="text" placeholder="手机号">
-        <input type="text" placeholder="邮箱">
-        <input type="password" placeholder="密码">
-        <input type="password" placeholder="确认密码">
-        <button>注&nbsp;册</button>
+        <input v-model="register.tel" type="text" placeholder="手机号">
+        <input v-model="register.email" type="text" placeholder="邮箱">
+        <input v-model="register.password" type="password" placeholder="密码">
+        <input v-model="register.qrpassword" type="password" placeholder="确认密码">
+        <button @click="registers({username:register.tel,password:register.password})">注&nbsp;册</button>
       </form>
   </div>
 </template>
 
 <script>
+import {mapMutations} from '../../vuex/store.js'
 export default {
-  name:'app-register-box'
+  name:'app-register-box',
+  data(){
+    return{
+      register:{
+        tel:'',email:'',password:'',qrpassword:''
+      }
+    }
+  },
+  methods:{
+    registers(params){
+
+      this.$store.commit('AppRegister',params)
+      this.$router.push({name:'app-login'})
+    }
+  }
 }
 </script>
 

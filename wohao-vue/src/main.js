@@ -14,10 +14,13 @@ Vue.use(MintUI)
 //swiper
 import '../node_modules/swiper/dist/css/swiper.min.css'
 
+//store
+import store from './vuex/store'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
