@@ -6,7 +6,7 @@
                 <i><img src="http://www.walhao.com/Template/mobile/new/Static/images/1440437165699930301.png" alt=""></i>
                 <span>全部分类</span>
             </router-link>
-            <router-link to="">
+            <router-link to="app-login">
                 <i><img src="http://www.walhao.com/Template/mobile/new/Static/images/1440439335793850371.png" alt=""></i>
                 <span>我的订单</span>
             </router-link>
@@ -14,7 +14,7 @@
                 <i><img src="http://www.walhao.com/Template/mobile/new/Static/images/1440439353048484531.png" alt=""></i>
                 <span>购物车</span>
             </router-link>
-            <router-link to="">
+            <router-link to="app-personal">
                 <i><img src="http://www.walhao.com/Template/mobile/new/Static/images/1440439367001464442.png" alt=""></i>
                 <span>个人中心</span>
             </router-link>
@@ -44,11 +44,10 @@ export default {
         background: #fff;
         padding-bottom: 10px;
         .search-con{
-            height: 60px;
-            padding-left:40px; 
             display: flex;
-            align-items: center;
-            padding-top:10px;
+            height: 0.6rem;
+            justify-content: center;
+            padding-top:20px;
             
             input{
                 border:none;

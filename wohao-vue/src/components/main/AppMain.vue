@@ -2,7 +2,7 @@
   <div class="app-main">
       <AppHeader></AppHeader>
       <AppBanner></AppBanner>
-      <AppCon></AppCon>
+      <AppCon></AppCon>    
   </div>
 </template>
 

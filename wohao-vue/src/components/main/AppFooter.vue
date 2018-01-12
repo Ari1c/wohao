@@ -19,7 +19,8 @@
           </li>
           <li>
               <i class="fa fa-user-o"></i>
-             <router-link to="app-login">我的</router-link>
+             <!-- <router-link to="app-login">我的</router-link> -->
+             <a @click="skip('app-login')">我的</a>
           </li>
       </ul>
   </div>
@@ -31,6 +32,15 @@ export default {
     name:'app-footer',
     components:{
         AppRegister
+    },
+    methods:{
+        skip(name){
+            this.$router.push('app-login')
+            var name_info = JSON.parse(localStorage.user_info)
+               console.log(name_info)
+            name_info.username?this.$router.push('app-personal'):this.$router.push('app-login')
+               console.log(name)
+        }
     }
 }
 </script>

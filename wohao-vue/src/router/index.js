@@ -4,6 +4,7 @@ import AppMain from '@/components/main/AppMain'
 import AppRegister from '@/components/register/AppRegister'
 import AppLogin from '@/components/login/AppLogin'
 import AppGoodList from '@/components/goodlist/AppGoodList'
+import AppPersonal from '@/components/personal/AppPersonal'
 
 import App from '@/App'
 
@@ -13,6 +14,7 @@ export default new Router({
   routes: [
     {path:'/',name:'main',component:AppMain},
     {path:'/app-login',name:'app-login',component:AppLogin},
+    {path:'/app-personal',name:'app-personal',component:AppPersonal},    
     {path:'/app-register',name:'app-register',component:AppRegister},
     {path:'/app-good-list',name:'app-good-list',component:AppGoodList}
   ]

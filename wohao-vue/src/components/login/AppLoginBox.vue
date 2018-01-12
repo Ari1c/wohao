@@ -9,7 +9,7 @@
       </div>
       <button class="login-btn" type="submit" @click="logins({username:login.username,password:login.password})">登&nbsp;录</button>
       <div class="auto">
-          <span><input type="checkbox" >自动登录</span>
+          <span><input type="checkbox" checked>自动登录</span>
           <router-link to="app-register">免费注册</router-link>
       </div>
       </div>
@@ -19,6 +19,7 @@
 <script>
 import {Toast} from 'mint-ui'
 import AppRegister from '../register/AppRegister'
+import AppPersonal from '../personal/AppPersonal'
 export default {
     name:'app-login-box',
     data(){
@@ -35,6 +36,7 @@ export default {
                    Toast('登陆成功')
                 //    that.$router.push({name:'/'})
                         that.$router.replace({name:'main'})
+                        // that.$router.replace({name:'app-personal'})
                }else{
                    Toast('登陆失败')
                }
@@ -42,7 +44,7 @@ export default {
         }
     },
     components:{
-        AppRegister
+        AppRegister,AppPersonal
     }
 }
 </script>
